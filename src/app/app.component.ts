@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  isActive = true;
+
+  onclick(event) {
+    event.stopPropagation();
+    console.log(event);
+  }
+
+  clickMe() {
+    console.log("i am propogating.")
+  }
 }
